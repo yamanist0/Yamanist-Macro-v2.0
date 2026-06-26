@@ -1,4 +1,4 @@
-# Macro Tool v2.0
+# Yamanist-Macro Tool v2.0
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
@@ -40,3 +40,9 @@ Macro macro is a full-featured automation application built for hardcore gamers 
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/yamanist/macro](https://github.com/yamanist/macro)
+
+<br>
+<hr>
+<p align="center">
+  <small>Made with 🤍 by <a href="https://github.com/yamanist">yamanist</a></small>
+</p>
