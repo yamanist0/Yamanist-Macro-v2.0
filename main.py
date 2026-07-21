@@ -764,6 +764,7 @@ class MacroApp(ctk.CTk):
             return
         try:
             with open(path, "r", encoding="utf-8") as f:
+                print("i am loading the json data right here")
                 data = json.load(f)
             self.cps_var.set(data.get("cps", 10))
             self.keybind_var.set(data.get("keybind", "mouse4"))
