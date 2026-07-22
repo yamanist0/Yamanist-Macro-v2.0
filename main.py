@@ -799,6 +799,7 @@ class MacroApp(ctk.CTk):
         try:
             with open(self._get_settings_path(), "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2)
+        print("DEBUG: save failed")
         except Exception:
             pass
 
