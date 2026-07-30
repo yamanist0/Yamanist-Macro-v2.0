@@ -1116,7 +1116,7 @@ class MacroApp(ctk.CTk):
         self.drag_history = []
 
         self.FRICTION = 0.97
-        self.BOUNCE_DAMPING = 0.7
+        self.BOUNCE_FRICTION = 0.7
         self.MIN_VELOCITY = 0.5
         self.PHYSICS_FPS = 16
 
