@@ -612,6 +612,7 @@ class MacroApp(ctk.CTk):
         )
         self.click_only_btn.pack(side="left")
 
+        # make another row for buttons below
         type_frame2 = ctk.CTkFrame(card, fg_color="transparent")
         type_frame2.pack(fill="x", pady=(8, 0))
 
