@@ -357,7 +357,7 @@ class MacroApp(ctk.CTk):
         self.range_row.pack(fill="x", after=self.cps_slider)
 
     def _build_manual_inputs(self):
-        # build widgets
+# making the widgets now
         self._refresh_manual_inputs()
 
     def _refresh_manual_inputs(self):
