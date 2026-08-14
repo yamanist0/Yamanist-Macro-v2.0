@@ -1131,10 +1131,10 @@ class MacroApp(ctk.CTk):
         widget_path = str(event.widget).lower()
         interactives = ["button", "scrollbar", "slider", "entry", "checkbox", "switch"]
         if any(x in widget_path for x in interactives):
-            self._ignore_drag = True
+            self._no_drag = True
             return
             
-        self._ignore_drag = False
+        self._no_drag = False
         
         self.physics_running = False
         self.is_dragging = True
