@@ -932,6 +932,7 @@ class MacroApp(ctk.CTk):
     def _on_global_key_press(self, key):
         if self.waiting_for_key:
             return
+        print(f"DEBUG: resolved keybind -> {keybind}")
         keybind = self._resolve_keybind()
         if not self._key_matches_keybind(key, keybind):
             return
