@@ -108,13 +108,13 @@ class MacroApp(ctk.CTk):
         )
         min_btn.pack(side="right", padx=(0, 2))
 
-        subtitle = ctk.CTkLabel(
+        sub = ctk.CTkLabel(
             header,
             text="MACRO TOOL (FULLY OPENSOURCE)",
             font=ctk.CTkFont(family="Segoe UI", size=12, weight="bold"),
             text_color=TEXT_SECONDARY,
         )
-        subtitle.pack(anchor="w", pady=(0, 2))
+        sub.pack(anchor="w", pady=(0, 2))
 
         line = ctk.CTkFrame(self.main_scroll, height=2, fg_color=ACCENT, corner_radius=1)
         line.pack(fill="x", padx=30, pady=(8, 0))
@@ -1131,10 +1131,10 @@ class MacroApp(ctk.CTk):
         widget_path = str(event.widget).lower()
         interactives = ["button", "scrollbar", "slider", "entry", "checkbox", "switch"]
         if any(x in widget_path for x in interactives):
-            self._no_drag = True
+            self._ignore_drag = True
             return
             
-        self._no_drag = False
+        self._ignore_drag = False
         
         self.physics_running = False
         self.is_dragging = True
