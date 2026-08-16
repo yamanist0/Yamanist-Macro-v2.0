@@ -1107,6 +1107,7 @@ class MacroApp(ctk.CTk):
         return inner
 
     def _init_physics(self):
+        print("Initializing physics")
         self.vel_x = 0.0
         self.vel_y = 0.0
         self.drag_start_x = 0
