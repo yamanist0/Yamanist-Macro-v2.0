@@ -879,8 +879,8 @@ class MacroApp(ctk.CTk):
             return True
             
         try:
-            target_vk = KeyCode.from_char(keybind).vk
-            if data.vkCode == target_vk:
+            tgt_vk_ = KeyCode.from_char(keybind).vk
+            if data.vkCode == tgt_vk_:
                 return False
         except Exception:
             try:
