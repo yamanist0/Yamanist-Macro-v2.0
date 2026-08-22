@@ -1210,6 +1210,7 @@ class MacroApp(ctk.CTk):
             self.vel_x = 0
             self.vel_y = 0
 
+        print(f"Drag ended, velocity: {self.vel_x}, {self.vel_y}")
         speed = (self.vel_x ** 2 + self.vel_y ** 2) ** 0.5
         if speed > 50:
             frame_dt = self.PHYSICS_FPS / 1000.0
