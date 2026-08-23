@@ -814,7 +814,7 @@ class MacroApp(ctk.CTk):
         if mtype == "custom_key":
             ck = self.custom_key_var.get()
             self.custom_key_btn.configure(text=f"[{ck.upper()}]")
-            # set buttons without triggering listen
+# set button colors here so it does not trigger the listener mode
             all_btns = {
                 "click_e": self.click_e_btn,
                 "click_only": self.click_only_btn,
