@@ -314,17 +314,17 @@ class MacroApp(ctk.CTk):
 
     def _on_turbo_toggle(self):
         if self.turbo_var.get():
-            new_max = 500
+            new_hi = 500
             steps = 499
         else:
-            new_max = 25
+            new_hi = 25
             steps = 49
             if self.cps_var.get() > 25:
                 self.cps_var.set(25)
                 self.cps_display.configure(text="25")
 
-        self.cps_slider.configure(to=new_max, number_of_steps=steps)
-        self.cps_max_label.configure(text=str(new_max))
+        self.cps_slider.configure(to=new_hi, number_of_steps=steps)
+        self.cps_max_label.configure(text=str(new_hi))
 
         current = self.cps_var.get()
         self.cps_slider.set(current)
@@ -814,7 +814,7 @@ class MacroApp(ctk.CTk):
         if mtype == "custom_key":
             ck = self.custom_key_var.get()
             self.custom_key_btn.configure(text=f"[{ck.upper()}]")
-# set button colors here so it does not trigger the listener mode
+            # set buttons without triggering listen
             all_btns = {
                 "click_e": self.click_e_btn,
                 "click_only": self.click_only_btn,
