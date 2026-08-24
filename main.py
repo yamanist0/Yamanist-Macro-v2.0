@@ -1125,6 +1125,7 @@ class MacroApp(ctk.CTk):
         self.MIN_VELOCITY = 0.5
         self.PHYSICS_FPS = 16
 
+        # Bind mouse events to handle dragging
         self.bind("<ButtonPress-1>", self._on_drag_start)
         self.bind("<B1-Motion>", self._on_drag_motion)
         self.bind("<ButtonRelease-1>", self._on_drag_end)
