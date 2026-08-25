@@ -971,6 +971,7 @@ class MacroApp(ctk.CTk):
             return
 
         mode = self.mode_var.get()
+        # Toggle mode turns the macro on and off
         if mode == "Toggle":
             if pressed:
                 if self.macro_active:
