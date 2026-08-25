@@ -1048,6 +1048,7 @@ class MacroApp(ctk.CTk):
                     if delay1: delay1 *= random.uniform(1 - rand_val, 1 + rand_val)
                     if delay2: delay2 *= random.uniform(1 - rand_val, 1 + rand_val)
 
+                print(f"macro_type: {macro_type}, delays: {delay1}, {delay2}")
                 if macro_type == "click_e":
                     self._mouse_ctrl.click(Button.left)
                     elapsed = time.perf_counter() - cycle_start
