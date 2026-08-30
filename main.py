@@ -349,6 +349,7 @@ print(f"HWND: {hwnd}")
             self._show_slider_area()
 
     def _hide_slider_area(self):
+        print("Hiding slider area")
         self.cps_slider.pack_forget()
         self.cps_display.pack_forget()
         self.range_row.pack_forget()
