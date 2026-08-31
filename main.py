@@ -135,7 +135,7 @@ class MacroApp(ctk.CTk):
         if not self.scroll_running:
             return
             
-        # stop the scroll if we are barely moving
+# stop scrolling if we are barely moving so it does not lag
         if abs(self.scroll_velocity) < 0.1:
             self.scroll_velocity = 0.0
             self.scroll_running = False
