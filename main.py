@@ -146,7 +146,6 @@ class MacroApp(ctk.CTk):
         scroll_amount = int(total_delta)
         self.scroll_remainder = total_delta - scroll_amount
         
-        print(f"Scroll amount: {scroll_amount}, remainder: {self.scroll_remainder}")
         if scroll_amount != 0:
             try:
                 self.main_scroll._parent_canvas.yview_scroll(scroll_amount, "units")
@@ -578,16 +577,16 @@ print(f"HWND: {hwnd}")
             self.mode_desc.configure(text="Hold -> Run, Release -> Stop")
 
     def _build_macro_type_section(self):
-        card = self._create_card()
+        cd = self._create_card()
 
         ctk.CTkLabel(
-            card,
+            cd,
             text="🖱 Macro Type",
             font=ctk.CTkFont(size=13, weight="bold"),
             text_color=TEXT_PRIMARY,
         ).pack(anchor="w")
 
-        type_frame = ctk.CTkFrame(card, fg_color="transparent")
+        type_frame = ctk.CTkFrame(cd, fg_color="transparent")
         type_frame.pack(fill="x", pady=(10, 0))
 
         self.click_e_btn = ctk.CTkButton(
@@ -617,7 +616,7 @@ print(f"HWND: {hwnd}")
         self.click_only_btn.pack(side="left")
 
         # make another row for buttons below
-        type_frame2 = ctk.CTkFrame(card, fg_color="transparent")
+        type_frame2 = ctk.CTkFrame(cd, fg_color="transparent")
         type_frame2.pack(fill="x", pady=(8, 0))
 
         self.e_only_btn = ctk.CTkButton(
@@ -647,7 +646,7 @@ print(f"HWND: {hwnd}")
         self.custom_key_btn.pack(side="left")
 
         self.macro_type_desc = ctk.CTkLabel(
-            card,
+            cd,
             text="Click -> Wait -> E",
             font=ctk.CTkFont(size=10),
             text_color=TEXT_SECONDARY,
