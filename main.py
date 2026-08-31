@@ -146,6 +146,7 @@ class MacroApp(ctk.CTk):
         scroll_amount = int(total_delta)
         self.scroll_remainder = total_delta - scroll_amount
         
+        print(f"Scroll amount: {scroll_amount}, remainder: {self.scroll_remainder}")
         if scroll_amount != 0:
             try:
                 self.main_scroll._parent_canvas.yview_scroll(scroll_amount, "units")
