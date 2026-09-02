@@ -79,6 +79,7 @@ class MacroApp(ctk.CTk):
         self._init_macro_engine()
         self._apply_loaded_settings()
 
+    print("DEBUG: building header")
     def _build_header(self):
         header = ctk.CTkFrame(self.main_scroll, fg_color="transparent")
         header.pack(fill="x", padx=30, pady=(28, 0))
