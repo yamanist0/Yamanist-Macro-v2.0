@@ -530,6 +530,7 @@ print(f"HWND: {hwnd}")
             text_color=TEXT_PRIMARY,
         ).pack(anchor="w")
 
+        # making a transparent frame to hold the toggle and hold buttons
         mode_frame = ctk.CTkFrame(card, fg_color="transparent")
         mode_frame.pack(fill="x", pady=(10, 0))
 
