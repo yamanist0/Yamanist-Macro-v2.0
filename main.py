@@ -681,6 +681,7 @@ print(f"HWND: {hwnd}")
             border_color=BORDER_COLOR,
             fg_color=ACCENT,
         )
+        # stop listening for keys now so it doesnt keep changing
         self.unbind("<KeyPress>")
         self.macro_type_desc.configure(text=f"Spam {key_name.upper()} key")
 
