@@ -73,6 +73,7 @@ class MacroApp(ctk.CTk):
         self.after(10, self._set_appwindow)
 
         self.lift()
+        # This brings the window to the front on startup
         self.attributes("-topmost", True)
         self.after(500, lambda: self.attributes("-topmost", False))
 
