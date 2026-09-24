@@ -144,9 +144,9 @@ print("Status: Building header UI")
             self.scroll_remainder = 0.0
             return
             
-        total_delta = self.scroll_velocity + self.scroll_remainder
-        scroll_amount = int(total_delta)
-        self.scroll_remainder = total_delta - scroll_amount
+        tot_delta = self.scroll_velocity + self.scroll_remainder
+        scroll_amount = int(tot_delta)
+        self.scroll_remainder = tot_delta - scroll_amount
         
         if scroll_amount != 0:
             try:
