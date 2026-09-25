@@ -929,6 +929,7 @@ print(f"HWND: {hwnd}")
         
         try:
             if hasattr(key, 'char') and key.char:
+                print(f"DEBUG: key={key} bind={keybind}")
                 return key.char.lower() == keybind
             elif hasattr(key, 'name') and key.name:
                 return key.name.lower() == keybind
