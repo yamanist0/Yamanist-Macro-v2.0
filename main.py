@@ -344,7 +344,7 @@ print(f"HWND: {hwnd}")
     def _on_manual_toggle(self):
         if self.manual_var.get():
             self._hide_slider_area()
-            self._refresh_manual_inputs()
+self._refresh_manual_inputs()
             self.manual_frame.pack(fill="x", pady=(10, 0))
         else:
             self.manual_frame.pack_forget()
