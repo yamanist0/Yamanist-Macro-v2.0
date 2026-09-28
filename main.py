@@ -999,6 +999,7 @@ self._refresh_manual_inputs()
         self.macro_thread.start()
 
     def _stop_macro(self):
+        print("Stopping macro")
         self.macro_active = False
         self.after(0, self._update_status_inactive)
 
