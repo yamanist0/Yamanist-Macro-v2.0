@@ -998,6 +998,7 @@ self._refresh_manual_inputs()
         self.macro_thread = threading.Thread(target=self._macro_loop, daemon=True)
         self.macro_thread.start()
 
+    # stops the macro execution
     def _stop_macro(self):
 print("Macro: Stopping")
         self.macro_active = False
