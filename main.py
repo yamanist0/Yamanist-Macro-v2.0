@@ -1142,9 +1142,9 @@ print("Macro: Stopping")
         self.bind("<ButtonRelease-1>", self._on_drag_end)
 
     def _on_drag_start(self, event):
-        widget_path = str(event.widget).lower()
+        wgt_path = str(event.widget).lower()
         interactives = ["button", "scrollbar", "slider", "entry", "checkbox", "switch"]
-        if any(x in widget_path for x in interactives):
+        if any(x in wgt_path for x in interactives):
             self._ignore_drag = True
             return
             
